@@ -14,7 +14,6 @@ export const navbar = defineNavbarConfig([
 		items: [
 			{ text: "数学分析", link: "/analysis/README.md" },
 			{ text: "高等代数", link: "/algebra/README.md" },
-			{ text: "python", link: "/python/README.md" },
 		],
 	},
 	{
