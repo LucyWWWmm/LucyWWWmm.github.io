@@ -175,7 +175,6 @@ export default defineUserConfig({
      comment: {
        provider: 'Twikoo', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
        comment: true,
-       envId: 'https://azure3.netlify.app/.netlify/functions/twikoo',
     //   repo: '',
     //   repoId: '',
     //   category: '',

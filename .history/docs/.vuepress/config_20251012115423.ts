@@ -13,8 +13,6 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 import { notes } from './notes'
-import { commentPlugin } from '@vuepress/plugin-comment'
-
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
@@ -175,7 +173,6 @@ export default defineUserConfig({
      comment: {
        provider: 'Twikoo', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
        comment: true,
-       envId: 'https://azure3.netlify.app/.netlify/functions/twikoo',
     //   repo: '',
     //   repoId: '',
     //   category: '',
