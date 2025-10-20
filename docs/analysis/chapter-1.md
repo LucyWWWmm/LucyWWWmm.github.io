@@ -9,8 +9,8 @@ createTime: 2025/10/11 22:24:43
 
 ## 1.1 集合
 
-有理数 $Q$   实数 $R=(-\infin,+\infin)$
-**非负整数 $Z_+$ **   非负实数 $R_+=[0,+\infin)$ 
+有理数 $Q$   实数 $R=(-\infin,+\infin)$  
+**非负整数** $Z_+$    非负实数 $R_+=[0,+\infin)$ 
 
 ## 1.2 映射
 
@@ -39,7 +39,7 @@ $$
 D(x)=
 \begin{cases}
 1,&\text{if $x\in Q$ }\\
-0,&\text{if $x\in R\Q$ }
+0,&\text{if $x\in R/Q$ }
 \end{cases}
 $$
 
@@ -57,11 +57,11 @@ $$
 
 ### 三、复合映射，可逆映射
 
-**复合映射** 假定 $f:X\to Y$ 和  $g:Y\to Z$
-		定义新的映射 $h=g\circ f :X\to Z$,
+**复合映射** 假定 $f:X\to Y$ 和  $g:Y\to Z$  
+		定义新的映射 $h=g\circ f :X\to Z$,  
 					$h(x)=g(f(x))$ ,称 $h=g\circ f$ 是 $f$ 和 $g$的复合映射
 
-**可逆映射** 若$Z=X$,且$f\circ g=I_x$,$g\circ f=I_y$
+**可逆映射** 若$Z=X$,且$f\circ g=I_x$,$g\circ f=I_y$  
 		 $f$ 是可逆的， $g$ 是 $f$ 的逆；$g$ 是可逆的, $f$ 是 $g$ 的逆	记 $f$ 的逆为 $f^{-1}=g$
 
 > 映射的复合运算满足结合律(证明?)，但一般不满足交换律
@@ -71,14 +71,14 @@ $$
 
 ### 四、延拓和限制
 
-假定 $X,Y,Z$ 是三个集合，$X\subset Y$,$f:Y\to Z$ 和 $g:X\to Z$ 是两个映射，如果对 $x\in X$ , $f(x)=g(x)$ ,
+假定 $X,Y,Z$ 是三个集合，$X\subset Y$,$f:Y\to Z$ 和 $g:X\to Z$ 是两个映射，如果对 $x\in X$ , $f(x)=g(x)$ ,  
 称 $f$ 是 $g$ 的延拓， $g$ 是  $f$ 在 $X$ 上的限制，也记 $g=f|_x$
 
 ## 1.3 函数
 
 ### 一、函数
 
-$X\subset R,Y\subset R,\ f:X\to Y$
+$X\subset R,Y\subset R,\ f:X\to Y$ 
 
 如: $y=f(x)=c$,c代表常函数
 
@@ -92,14 +92,14 @@ $X\subset R,Y\subset R,\ f:X\to Y$
 
 #### 2、周期性
 
-$\exist T>0,f(x+T)=f(x)$
+$\exist T>0,f(x+T)=f(x)$  
 最小正周期： $T$ 最小
 
 > 有周期性，无最小正周期：狄利克雷函数(Dirichlet),常函数
 
 #### 3、有界性
 
-**有界函数**  $f:X\to Y,if\exist M>0,\forall x\in X,|f(x)|\leq M$
+**有界函数**  $f:X\to Y,if\exist M>0,\forall x\in X,|f(x)|\leq M$  
 否则，**无界函数**  $若\forall n、\exist x_n\in X,s.t.|f(x)|\geq n$
 
 
@@ -108,8 +108,9 @@ $\exist T>0,f(x+T)=f(x)$
 
 ### 实数
 
-1. 我们先来看自然数集 $N$ ,集合是无序的,我们人为地排序,即0,1,2,3 $\cdots$   (这里也提到了0算不算自然数的问题,数学分析中不认为是)
-	这里提到了皮亚诺公理(一种归纳法),让我抄一下百度百科
+我们先来看自然数集 $N$ ,集合是无序的,我们人为地排序,即0,1,2,3 $\cdots$   (这里也提到了0算不算自然数的问题,数学分析中不认为是) 
+
+这里提到了皮亚诺公理(一种归纳法),让我抄一下百度百科
 
 > - Ⅰ、0是自然数；
 > - Ⅱ、每一个确定的自然数*a*，都具有确定的后继数*a*' ，*a*'也是自然数（数*a*的后继数*a*'就是紧接在这个数后面的整数（*a*+1）。例如：*1*'=2，*2*'=3等等。）；
@@ -128,11 +129,12 @@ $\exist T>0,f(x+T)=f(x)$
 
 
 
-2.有理数= $\dfrac pq$      $p,q\in N$  (有限,无限循环小数)
-无理数 无限不循环小数
+2.有理数= $\dfrac pq$      $p,q\in N$  (有限,无限循环小数)  
+无理数 无限不循环小数  
 $有理数\bigcup 无理数=实数$ 
 
 3.非规范小数：无限循环9    有下面的情况:   $\pm b_0 b_1\cdots b_p9999\cdots 9=\pm b_0 b_1\cdots(b_p+1)0000\cdots 0(其中b_p<9)$
+
 其他的是规范小数.每个实数都有唯一的规范小数表示 
 
 ### 一、实数连续性定理
@@ -161,7 +163,8 @@ $有理数\bigcup 无理数=实数$
 
 $[a_n,b_n](n\in Z_+)$ 是一列**闭区间**，且 $[a_{n+1},b_{n=1}]\subset [a_n,b_n]$
 (1) $\exist c\in R\ s.t.c\in [a_n,b_n](n\in Z_+)$
-(2) $\forall$  正数 $\epsilon>0,\exist n\in N,s.t.[a_n,b_n]$ 的长度 $(b_n-a_n)<\epsilon$ ,则 $c$ 是唯一的
+
+(2) $\forall$  正数 $\epsilon>0,\exist n\in N,s.t.[a_n,b_n]$ 的长度 $(b_n-a_n)<\epsilon$ ,则 $c$ 是唯一的  
     或者	则 $\exist$ 唯一的 $c\in \bigcap\limits^\infin_{n=1}[a_n,b_n]$
 
 ### 四、有限覆盖定理
@@ -175,6 +178,8 @@ $[a_n,b_n](n\in Z_+)$ 是一列**闭区间**，且 $[a_{n+1},b_{n=1}]\subset [a_
 实数集 $R$ 的任何有界无穷子集至少有一个聚点（极限点）。
 
 > 定义：给定  $x\in R$ ，包含点 $x$ 的开区间称为 $X$ 的**邻域**
-> 	   对 $\delta >0,$ $开区间 $(x-\delta,x+\delta)$ 称为 **=点 $x$ 的 $\delta$ 领域**
-> 	   $V$\ \{x\}$ 为点 $x$ 的去心领域
+>
+> ​	   对 $\delta >0,$ 开区间  $(x-\delta,x+\delta)$  称为 **点 $x$ 的 $\delta$ 领域**
+>
+> ​	   $V$\ \{x\} 为点 $x$  的去心领域
 
