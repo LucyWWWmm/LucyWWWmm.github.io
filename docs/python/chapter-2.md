@@ -61,7 +61,7 @@ and前面判断为false，中断执行；or前面判断为true，中断执行
 
 #### 布尔值的判定
 
-布尔值为False，其他为TrueT
+布尔值为False，其他为True
 
 * None
 * 值为0的数值：0，0.0，0j
@@ -89,7 +89,7 @@ print("累和结果为",result)
 循环进行
 
 ```python
-while true:
+while True:
 ```
 
 ```python
@@ -105,5 +105,43 @@ while id_code.lower() !='n':
 ```python
 while id_code != 'n'or'N'#因为逻辑运算符的优先级低，后面的‘N’被认为是true
 while id_code != ('n'or'N')#这样是对的
+```
+
+## break和continue
+
+break跳出当前所在层的循环
+
+continue结束本次循环，不跳出当前循环
+
+---
+
+
+
+# 嵌套循环
+
+```python
+for i in range(5):
+    for j in range(10):
+        print("*",end='')
+```
+
+连续打印了50个*，每十个中间有空格
+
+```python
+for i in range(5):
+    for j in range(10):
+        print("*",end='')
+    print("")#默认结尾为换行符
+```
+
+分五行，每行10个*
+
+# 异常处理
+
+```python
+try:
+    <语句块1>
+except<异常类型>:
+	<语句块2>
 ```
 

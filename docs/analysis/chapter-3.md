@@ -353,14 +353,23 @@ ax, & x < 1
 **命题** $\lim_{x \to \infty} f(x) = l \iff \lim_{x \to +\infty} f(x) = l = \lim_{x \to -\infty} f(x)$
 
 > **例**：设 $f(x) = \left(1 + \frac{1}{[x]}\right)^{[x] + 1}$，$x \geq 1$，证明 $\lim_{x \to +\infty} f(x) = e$
+>
 > 证：$\forall \varepsilon > 0$ ① 取 $N(\varepsilon)$，当 $n > N$ 时，$0 \leq \left(1 + \frac{1}{n}\right)^{n + 1} - e < \varepsilon$
+>
 > ② 取 $X = N(\varepsilon)$，则当 $x > X$ 时，$[x] \geq x - 1 > N - 1$
+>
 > $\implies \left(1 + \frac{1}{x}\right)^{[x] + 1} - e \leq \left(1 + \frac{1}{n}\right)^{n + 1} - e < \varepsilon$
+>
+> 
 
 > **例** $\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e$
+>
 > 先证 $\lim_{x \to +\infty} \left(1 + \frac{1}{x}\right)^x = e$（再证 $\lim_{x \to -\infty} \left(1 + \frac{1}{x}\right)^x = e$ 后面再说）
+>
 > 证：$x \geq 2$，$[x] \leq x < [x] + 1$
+>
 > $\left(1 + \frac{1}{[x] + 1}\right)^{[x]} \leq \left(1 + \frac{1}{x}\right)^x \leq \left(1 + \frac{1}{[x]}\right)^{[x] + 1} \to e$
+>
 > $\lim_{x \to \infty} \left(1 + \frac{1}{[x]}\right)^{[x]} = e$，由夹逼定理
 
 ---
@@ -371,27 +380,162 @@ ax, & x < 1
 
 **例** $f(x) = \frac{1}{x}$，$x \to 0$，$\lim_{x \to 0} \frac{1}{x} = \infty$
 
-#### 定义：
+### 定义：
 
 设 $f(x)$ 在 $x_0$ 某去心邻域有定义，若 $\forall A > 0, \exists \delta = \delta(A)$，当 $0 < |x - x_0| < \delta$ 时，$|f(x)| > A$
+
 称 $f(x)$ 当 $x \to x_0$ 时极限是 $\infty$，记 $\lim_{x \to x_0} f(x) = \infty$
+
 $f(x) \to +\infty$ 即 $\lim_{x \to x_0} f(x) = +\infty$
 
 > **例** 证 $\lim_{x \to 0^+} \frac{1}{x} = +\infty$
+>
 > 证：$\forall A > 0$，要使 $\frac{1}{x} > A (x > 0)$，只要 $x < \frac{1}{A}$
+>
 > 取 $\delta = \frac{1}{A}$，则当 $0 < x < \delta$ 时，$\frac{1}{x} > A$
+>
 > $\therefore \lim_{x \to 0^+} \frac{1}{x} = +\infty$
 
 > **例** $\lim_{x \to \infty} \frac{1}{x^n} = 0 (n \geq 1, n \in \mathbb{N})$
+>
 > 证：$\forall \varepsilon > 0$，要使 $\left| \frac{1}{x^n} - 0 \right| < \varepsilon$，只要 $|x| > \frac{1}{\varepsilon^{\frac{1}{n}}}$
+>
 > 取 $X = \frac{1}{\varepsilon^{\frac{1}{n}}}$，则当 $|x| > X$ 时，$\left| \frac{1}{x^n} - 0 \right| < \varepsilon$
+>
 > $\therefore \lim_{x \to \infty} \frac{1}{x^n} = 0$
 
-#### 定理
+### 定理：复合函数求极限
 
  $\lim_{x \to x_0} f[g(x)] = l \iff$ 当 $x \to x_0$ 时 $g(x) \to \infty$ 且 $\lim_{n \to \infty} f(n) = l$
 
 > **例** 证 $\lim_{x \to -\infty} \left(1 + \frac{1}{x}\right)^x = e$
-> $\lim_{x \to -\infty} \left(1 + \frac{1}{x}\right)^x \stackrel{x = -y}{=} \lim_{y \to +\infty} \left(1 - \frac{1}{y}\right)^{-y}$
-> 当 $x \to -\infty$ 时，$y \to +\infty$
+>
+> $\lim_{x \to -\infty} \left(1 + \frac{1}{x}\right)^x \stackrel{x = -y}{=} \lim_{y \to +\infty} \left(1 - \frac{1}{y}\right)^{-y}$ （当 $x \to -\infty$ 时，$y \to +\infty$ ）
+>
 > $\lim_{y \to +\infty} \frac{1}{\left(1 - \frac{1}{y}\right)^{-y}} = \lim_{y \to \infty} \frac{1}{\left(1 - \frac{1}{y}\right)^y} = \frac{1}{e}$
+
+
+
+### 极限计算与无穷小/大阶的比较
+
+1. 求 $\lim_{x \to 0} (1-2x)^{\frac{1}{x}}$
+
+   令 $-2x = t$，当 $x \to 0$ 时，$t \to 0$，则
+$$
+\lim_{x \to 0} (1-2x)^{\frac{1}{x}} = \lim_{t \to 0} (1+t)^{-\frac{2}{t}} = \left( \lim_{t \to 0} (1+t)^{\frac{1}{t}} \right)^{-2} = e^{-2}
+$$
+
+
+2. 求 $\lim_{n \to \infty} \left(1+\frac{2}{n}\right)^n$（数列极限）
+
+   求函数极限：$\lim_{x \to +\infty} \left(1+\frac{2}{x}\right)^x = \lim_{x \to +\infty} \left[ \left(1+\frac{1}{\frac{x}{2}}\right)^{\frac{x}{2}} \right]^2 = e^2$
+
+   再由 Heine 定理，数列极限 $\lim_{n \to \infty} \left(1+\frac{2}{n}\right)^n = e^2$
+
+
+3. 无穷大与无穷小的关系
+
+   (1) 设 $\lim_{x \to \infty} f(x) = \infty$（无穷大量），则 $\lim_{x \to \infty} \frac{1}{f(x)} = 0$
+
+   (2) 设 $\lim_{x \to x_0} f(x) = 0$，且 $\exists \delta > 0$ 使 $f(x) \neq 0\ \forall x \in B(\mathring{x_0}, \delta)$ ，则 $\lim_{x \to x_0} \frac{1}{f(x)} = \infty$
+
+
+4. “$A-X$”语言（无穷大的定义）
+   $\lim_{x \to \infty} f(x) = \infty \iff \forall A > 0,\ \exists X > 0$，当 $|x| > X$ 时，$|f(x)| > A$
+
+   证明 (1)：$\forall \varepsilon > 0$，取 $A = \frac{1}{\varepsilon}$，由 $\lim_{x \to \infty} f(x) = \infty$，$\exists X > 0$，当 $|x| > X$ 时，
+   
+   $|f(x)| > \frac{1}{\varepsilon}$，即 $\left| \frac{1}{f(x)} \right| < \varepsilon$，故 $\lim_{x \to \infty} \frac{1}{f(x)} = 0$
+
+
+5. 多项式型极限（$\lim_{x \to \infty} \dfrac{a_0 x^n + a_1 x^{n-1} + \dots + a_n}{b_0 x^m + b_1 x^{m-1} + \dots + b_m},\ b_0, a_0 \neq 0$）
+   (1) 若 $m > n$：
+$$
+   \text{原式} = \lim_{x \to \infty} \frac{a_0 x^{n-m} + a_1 x^{n-m-1} + \dots + a_n x^{-m}}{b_0 + b_1 x^{-1} + \dots + b_m x^{-m}} = 0
+$$
+   (2) 若 $m = n$：
+$$
+   \text{原式} = \lim_{x \to \infty} \frac{a_0 + a_1 x^{-1} + \dots + a_n x^{-n}}{b_0 + b_1 x^{-1} + \dots + b_m x^{-m}} = \frac{a_0}{b_0}
+$$
+   (3) 若 $m < n$：
+$$
+   \text{原式} = \lim_{x \to \infty} x^{n-m} \cdot \frac{a_0 + a_1 x^{-1} + \dots + a_n x^{-n}}{b_0 x^{m-n} + b_1 x^{m-n-1} + \dots + b_m x^{-n}} = \infty
+$$
+
+> 例：已知多项式 $P(x) = a_0 x^n + a_1 x^{n-1} + \dots + a_n$（$a_0 \neq 0$，$n$ 为正整数），证明 $\lim_{x \to \infty} P(x) = \infty$（$a_0 > 0$ 时；若 $a_0 < 0$，则结果为 $-\infty$）。
+>
+> 根据无穷大与无穷小的关系：要证 $\lim_{x \to \infty} P(x) = \infty$，等价于证明 $lim_{x \to \infty} \frac{1}{P(x)} = 0$
+
+
+
+### 无穷小/大的阶
+
+1. 无穷小量： $x \to x_0$ 时，$f(x)$ ,  $g(x)$ 为无穷小量
+
+   记 $f(x) = o(1),\ g(x) = o(1)\ (x \to x_0)$，若：
+
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = 0$：$f(x)$ 是比 $g(x)$ 高阶无穷小量
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = l \neq 0$：$f(x)$ 与 $g(x)$ 是同阶无穷小量
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = 1$：$f(x)$ 与 $g(x)$ 是等价无穷小量
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = \infty$：$f(x)$ 是比 $g(x)$ 低阶的无穷小量
+
+
+2.  **常见等价无穷小（ $x \to 0$ 时）**
+   - $\sin x \sim x$
+   - $\sqrt{1+x} - 1 \sim \frac{1}{2}x$
+   - $1 - \cos x \sim \frac{1}{2}x^2$
+
+
+3. 例：$\lim_{x \to 0} x \sin \frac{1}{x} = 0$，但 $x \sin \frac{1}{x}$ 没有阶（$\forall 0 < \alpha < 1$，$x \sin \frac{1}{x}$ 是比 $x^\alpha$ 高阶的无穷小，但不是一阶无穷小）
+
+
+4. 无穷大的阶（$x \to x_0$ 或 $x \to \infty$ 时，$f(x), g(x)$ 为无穷大）
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = \infty$：$f(x)$ 是比 $g(x)$ 高阶无穷大量
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = l \neq 0$：$f(x)$ 与 $g(x)$ 是同阶无穷大量
+   - $\lim_{x \to x_0} \frac{f(x)}{g(x)} = 1$：$f(x)$ 与 $g(x)$ 是等价无穷大量
+
+> 例：$\lim_{x \to 1} \dfrac{x^2 + x - 2}{(x^2 - 1)^3} = \lim_{x \to 1} \dfrac{(x-1)(x+2)}{(x-1)^3(x+1)^3} = \lim_{x \to 1} \dfrac{x+2}{(x-1)^2(x+1)^3}$，
+>
+> 看与 $\dfrac{1}{(x-1)^2}$ 的关系 2阶无穷大
+
+### 等价无穷小(大)量在求极限应用
+
+设 $f(x) \sim g(x)\ (x \to x_0)$，则：
+1. $\lim_{x \to x_0} f(x) h(x) = \lim_{x \to x_0} g(x) h(x)$
+2. $\lim_{x \to x_0} \frac{h(x)}{f(x)} = \lim_{x \to x_0} \frac{h(x)}{g(x)}$
+
+证明 (1)： $\lim_{x \to x_0} f(x) h(x) = \lim_{x \to x_0} \frac{f(x)}{g(x)} \cdot g(x) h(x)$ 
+
+ $= \lim_{x \to x_0} \frac{f(x)}{g(x)} \cdot \lim_{x \to x_0} g(x) h(x) = \lim_{x \to x_0} g(x) h(x)$
+
+
+
+
+1. 例：求 $\lim_{x \to 0} \dfrac{\sin ax}{\sin bx}\ (a, b \neq 0)$ ,这是一个“ $\dfrac{0}{0}$ ”
+   由 $\sin ax \sim ax,\ \sin bx \sim bx\ (x \to 0)$，得：
+$$
+\lim_{x \to 0} \frac{\sin ax}{\sin bx} = \lim_{x \to 0} \frac{ax}{bx} = \frac{a}{b}
+$$
+
+
+2. 例：求 $\lim_{x \to 0^+} \dfrac{(\sqrt{1+\sqrt{x}} - 1) \tan \frac{x}{2}}{1 - \cos x^{\frac{3}{4}}}$
+   由 $x \to 0^+$ 时：
+   - $\sqrt{1+\sqrt{x}} - 1 \sim \frac{1}{2}\sqrt{x}$
+   - $\tan \frac{x}{2} \sim \frac{x}{2}$
+   - $1 - \cos x^{\frac{3}{4}} \sim \frac{1}{2}x^{\frac{3}{2}}$
+   故：
+$$
+   \lim_{x \to 0^+} \frac{\frac{1}{2}\sqrt{x} \cdot \frac{x}{2}}{\frac{1}{2}x^{\frac{3}{2}}} = \lim_{x \to 0^+} \frac{\frac{1}{4}x^{\frac{3}{2}}}{\frac{1}{2}x^{\frac{3}{2}}} = \frac{1}{2}
+$$
+
+
+3. 例：求 $\lim_{x \to 0} \dfrac{\sin x - \tan x}{x^3}$ ,这也是一个“ $\dfrac{0}{0}$ ”
+
+   化简：$\sin x - \tan x = \sin x \left(1 - \frac{1}{\cos x}\right) = \frac{\sin x (\cos x - 1)}{\cos x}$
+
+   由 $\sin x \sim x,\ \cos x - 1 \sim -\frac{1}{2}x^2\ (x \to 0)$，得：
+$$
+\lim_{x \to 0} \frac{x \cdot \left(-\frac{1}{2}x^2\right)}{x^3 \cos x} = \lim_{x \to 0} \frac{-\frac{1}{2}x^3}{x^3 \cos x} = -\frac{1}{2}
+$$
+
+

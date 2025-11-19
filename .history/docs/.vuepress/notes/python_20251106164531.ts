@@ -1,15 +1,15 @@
 import { defineCollection } from "vuepress-theme-plume";
 
 export default defineCollection({
-  dir: "aanalysis",
+  dir: "python",
   sidebar: [
     {
-      text: "数学分析",
+      text: "python",
       collapsed: false,
-      link: "/analysis/",
-      items: ["chapter-1", ],
+      link: "/python/",
+      items: ["chapter-1", "chapter-2", "chapter-3", "practice"],
     },
   ],
-  title: '数学分析',
+  title: 'python',
   type: "doc",
 });

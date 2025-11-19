@@ -7,7 +7,7 @@ export default defineCollection({
       text: "python",
       collapsed: false,
       link: "/python/",
-      items: ["chapter-1", "chapter-2", "practice"],
+      items: ["chapter-1", "chapter-2", "chapter-3", "practice"],
     },
   ],
   title: 'python',
