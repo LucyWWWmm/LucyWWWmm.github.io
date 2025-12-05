@@ -16,7 +16,7 @@ createTime: 2025/10/12 10:20:03
 >
 > ​	2.几何意义： $\forall \varepsilon >0$ ,作开区间 $(a-\varepsilon ,a+\varepsilon)$ 其中有无穷项
 
-1.$a_n\not\to a \Leftrightarrow \exist \varepsilon >0,\forall N,\exist n_N >N,s.t.|a_N|\geqslant \varepsilon$
+1.$a_n\not\to a \Leftrightarrow \exist \varepsilon >0,\forall N,\exist n_N >N,s.t.|a_n-a|\geqslant \varepsilon$
 
 2.极限定义不能等效为 $\exist N,\forall \varepsilon >0$ 当 $n>N$ 时, $|a_n -a|<\varepsilon \Rightarrow a_n =a,\forall n>N$
 
@@ -66,9 +66,9 @@ createTime: 2025/10/12 10:20:03
 
 ### 定理：“保号性”
 
-  1.设  $\underset{n\to \infty}{lim}a_n=a$  , $a> \alpha$ ,则 $\exist N_1$ ,当 $n>N_1$ 时, $a_n> \alpha$ ,
+  1.设  $\underset{n\to \infty}{lim}a_n=a$  , $a> \alpha$ ,则 $\exist N_1$ ,当 $n>N_1$ 时, $a_n> a$ ,
 
-​        $\underset{n\to \infty}{lim}b_n=b,b< \beta$  ,则 $\exist N_2$ ,当 $n>N_2$ 时, $b_n < \beta$
+​        $\underset{n\to \infty}{lim}b_n=b,b< \beta$  ,则 $\exist N_2$ ,当 $n>N_2$ 时, $b_n < b$
 
 2. $\exist N \in \N ,s.t.$ 当 $n>N$ 时, $a_n \leq b_n$ ,则 $a \leq b$
 
@@ -228,7 +228,7 @@ $=\lim\limits_{n\to\infin}\dfrac{\sqrt{n}}{\sqrt{n+1}+\sqrt{n}}$
 
 {夹逼不等式构造}
 
-对任意正整数  $ n $ ，由于 $\frac{1}{\sqrt{n^2 + n}} \leq \frac{1}{\sqrt{n^2 + k}} \leq \frac{1}{\sqrt{n^2 + 1}} ( k = 1,2,\dots,n)$，对这 $ n $ 项求和得：  
+对任意正整数  $n$ ，由于 $\frac{1}{\sqrt{n^2 + n}} \leq \frac{1}{\sqrt{n^2 + k}} \leq \frac{1}{\sqrt{n^2 + 1}} ( k = 1,2,\dots,n)$，对这 $n$ 项求和得：  
 $\frac{n}{\sqrt{n^2 + n}} \leq a_n \leq \frac{n}{\sqrt{n^2 + 1}}$
 
 {两边极限计算}
@@ -256,7 +256,7 @@ $\lim_{n \to \infty} \frac{n}{\sqrt{n^2 + 1}} = \lim_{n \to \infty} \frac{1}{\sq
 >
 >  $a - \varepsilon$ 不是 $\{a_n\}$ 的上界，故存在 $N$，使得  $a_N > a - \varepsilon$ 。
 >
-> $ n > N $ 时，由数列单增性，$a_n \geq a_N > a - \varepsilon$；
+> $n > N$ 时，由数列单增性，$a_n \geq a_N > a - \varepsilon$；
 >
 > 由上确界定义，$a_n \leq a < a + \varepsilon$ 。
 >
@@ -338,7 +338,7 @@ $$
 $\{a_n\}$ 收敛 $\iff$ 数列 $\{a_n\}$ 是Cauchy列
 
 > 证：$\Rightarrow$  方向（收敛 $\Rightarrow$ Cauchy 数列）  
->  已知 $a_n \to a$（$n \to \infty$），对任意 $\varepsilon > 0$ ，存在 $N$ ，当 $ n > N $ 时， $|a_n - a| < \frac{\varepsilon}{2}$ ，  
+>  已知 $a_n \to a$（$n \to \infty$），对任意 $\varepsilon > 0$ ，存在 $N$ ，当 $n > N$ 时， $|a_n - a| < \frac{\varepsilon}{2}$ ，  
 >  于是当 $n, m > N$  时：  
 >  $|a_n - a_m| \le |a_n - a| + |a_m - a| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon$  
 >  故 $\{a_n\}$ 是 Cauchy 数列。  
@@ -391,7 +391,7 @@ $\{a_n\}$ 收敛 $\iff$ 数列 $\{a_n\}$ 是Cauchy列
 > 对 $\forall M > 0$，要使 $a_n > M$，只需 $\frac{1}{8}n^3 > M$，即 $n > (8M)^{\frac{1}{3}}$
 >
 > 取 $N = \max\left\{ \left\lfloor (8M)^{\frac{1}{3}} \right\rfloor + 1,\ 6 \right\}$，
-> 则当 $ n > N $ 时，$a_n \ge \frac{1}{8}n^3 > M$，故 $\lim_{n \to \infty} a_n = +\infty$
+> 则当 $n > N$ 时，$a_n \ge \frac{1}{8}n^3 > M$，故 $\lim_{n \to \infty} a_n = +\infty$
 
    
 
@@ -431,13 +431,13 @@ $\{a_n\}$ 收敛 $\iff$ 数列 $\{a_n\}$ 是Cauchy列
 > $$b_n = a_{k_n}.$$
 > 对任意 $n \in \mathbb{N}$，$k_n \geq n$，
 >
-> 因此，当 $ n > N $ 时，有 $k_n \geq n > N$。从而  
+> 因此，当 $n > N$ 时，有 $k_n \geq n > N$。从而  
 > $$|b_n - a| = |a_{k_n} - a| < \varepsilon.$$  
 > 这正表明 $\{b_n\}$ 收敛于 $a$。
 
 3.命题：若 $\lim\limits_{n \to \infty} a_n = a$（或 $+\infty/- \infty$），则对任意子列 $\{a_{n_k}\}$，有 $a_{n_k} \to a$（或 $+\infty/- \infty$，$k \to \infty$）。
 
->  证：对 $\forall M > 0$，$\exists N$，当 $ n > N $ 时，$|a_n| > M$ 。
+>  证：对 $\forall M > 0$，$\exists N$，当 $n > N$ 时，$|a_n| > M$ 。
 >
 > 取子列下标 $k = n_N$，则当 $k > K$ 时，$n_k > n_K \geq k= n_N \geq  N$，故 $n_k \geq N$，即子列满足极限定义。
 
@@ -467,7 +467,7 @@ $\lim\limits_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$。
 
 > 证法一：$|\sqrt{a_n} - \sqrt{a}| = \frac{|a_n - a|}{\sqrt{a_n} + \sqrt{a}} \leq \frac{|a_n - a|}{\sqrt{a}} \to 0$（由夹逼定理）。
 >
-> 证法二：对 $\forall \varepsilon > 0$，由 $a_n \to a$（$n \to \infty$），$\exists N$，当 $ n > N $ 时，$|a_n - a| < \varepsilon \sqrt{a}$。于是当 $ n > N $ 时，$|\sqrt{a_n} - \sqrt{a}| \leq \frac{|a_n - a|}{\sqrt{a}} < \frac{\varepsilon \sqrt{a}}{\sqrt{a}} = \varepsilon$。
+> 证法二：对 $\forall \varepsilon > 0$，由 $a_n \to a$（$n \to \infty$），$\exists N$，当 $n > N$ 时，$|a_n - a| < \varepsilon \sqrt{a}$。于是当 $ n > N $ 时，$|\sqrt{a_n} - \sqrt{a}| \leq \frac{|a_n - a|}{\sqrt{a}} < \frac{\varepsilon \sqrt{a}}{\sqrt{a}} = \varepsilon$。
 
   
 
@@ -509,9 +509,9 @@ $\lim\limits_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e$。
 >
 > 对 $\forall \varepsilon > 0$，因 $\lim\limits_{n \to \infty} M |q|^n \cdot \frac{1}{1 - |q|} = 0$（$|q| < 1$），
 >
-> 故 $\exists N$，当 $ n > N $ 时，$M |q|^n \cdot \frac{1}{1 - |q|} < \varepsilon$。
+> 故 $\exists N$，当 $n > N$ 时，$M |q|^n \cdot \frac{1}{1 - |q|} < \varepsilon$。
 >
-> 于是当 $ n > N $ 时，对 $\forall p \in \mathbb{N}$，有 $|b_{n+p} - b_n| < \varepsilon$，即 $\{b_n\}$ 是 Cauchy 列，故收敛。
+> 于是当 $n > N$ 时，对 $\forall p \in \mathbb{N}$，有 $|b_{n+p} - b_n| < \varepsilon$，即 $\{b_n\}$ 是 Cauchy 列，故收敛。
 
   
 

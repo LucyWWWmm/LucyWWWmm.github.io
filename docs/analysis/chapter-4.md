@@ -6,9 +6,9 @@ createTime: 2025/11/19 14:42:43
 
 
 
-## 2.7 连续函数
+# 2.7 连续函数
 
-**定义**：设 $f(x)$ 在 $x_0$ 附近有定义，若 $\lim_{x \to x_0} f(x) = f(x_0)$，则称 $f(x)$ 在 $x_0$ 点连续。
+### 定义：设 $f(x)$ 在 $x_0$ 附近有定义，若 $\lim_{x \to x_0} f(x) = f(x_0)$，则称 $f(x)$ 在 $x_0$ 点连续。
 
 $\varepsilon-\delta$ 语言：$\forall \varepsilon > 0,\ \exists \delta = \delta(\varepsilon, x_0) > 0$，使得当 $|x - x_0| < \delta$ 时，$|f(x) - f(x_0)| < \varepsilon$
 
@@ -28,7 +28,7 @@ $\varepsilon-\delta$ 语言：$\forall \varepsilon > 0,\ \exists \delta = \delta
 
 ---
 
-例：讨论 $f(x) = \begin{cases} x^3,\ &x \geq 0 \\ 1 + \frac{\sin x}{x},\ &x < 0 \end{cases}$ 的连续性
+> 例：讨论 $f(x) = \begin{cases} x^3,\ &x \geq 0 \\ 1 + \frac{\sin x}{x},\ &x < 0 \end{cases}$ 的连续性
 
 - $x > 0$ 时，$f(x) = x^3$ 连续；$x < 0$ 时，$f(x) = 1 + \frac{\sin x}{x}$ 连续
 - 右连续：$\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x^3 = 0 = f(0)$
@@ -37,9 +37,9 @@ $\varepsilon-\delta$ 语言：$\forall \varepsilon > 0,\ \exists \delta = \delta
 
 ---
 
-证明 $y = a^x\ (a > 0, a \neq 1)$ 在 $(-\infty, +\infty)$ 处处连续
-
-要证 $\forall x_0 \in (-\infty, +\infty)$，有 $\lim_{x \to x_0} a^x = a^{x_0}$，分两种情况：
+> 证明 $y = a^x\ (a > 0, a \neq 1)$ 在 $(-\infty, +\infty)$ 处处连续
+>
+> 要证 $\forall x_0 \in (-\infty, +\infty)$，有 $\lim_{x \to x_0} a^x = a^{x_0}$，分两种情况：
 
 （Ⅰ）当 $a > 1$ 时
 
@@ -85,9 +85,11 @@ $$
 
 综上，$y = a^x \ (a > 0, a \neq 1)$ 在 $(-\infty, +\infty)$ 处处连续。
 
-## 2.8 连续函数与极限函数
 
- 例1：求极限
+
+# 2.8 连续函数与极限函数
+
+>  例1：求极限
 
 1. $\lim_{x \to 0}\frac{\ln(1+x)}{x}$
 2. $\lim_{x \to 0}\frac{a^x - 1}{x} \ (a > 0, a \neq 1)$
@@ -235,37 +237,37 @@ $$
 
 ---
 
-## 2.9 函数一致连续性
+# 2.9 函数一致连续性
 
-#### 一致连续与连续的关系
+## 一致连续与连续的关系
 
 函数 $f(x)$ 在 $[a,b]$ 连续 $\iff \forall x_0 \in [a,b]$，$\lim_{x \to x_0}f(x)=f(x_0)$，
 
 即 $\forall x_0 \in [a,b],\forall \varepsilon>0,\exists \delta(\varepsilon,x_0)>0$，当 $|x-x_0|<\delta$ 时，$|f(x)-f(x_0)|<\varepsilon$。
 
+## 一致连续的定义
 
-#### 一致连续的定义
 设 $f(x)$ 在区间 $I$ 有定义，若 $\forall \varepsilon>0,\exists \delta=\delta(\varepsilon)>0$，
 
 当 $x_1,x_2 \in I$ 且 $|x_1-x_2|<\delta$ 时，有 $|f(x_1)-f(x_2)|<\varepsilon$，
 
 则称 $f(x)$ 在 $I$ 一致连续。
 
+## 一致连续的性质
 
-#### 一致连续的性质
 若 $f(x)$ 在 $(a,b)$ 或 $[a,b]$ 一致连续，则 $f(x)$ 在 $I$ 上连续。
 证明：$\forall x_0 \in I$，下证 $\lim_{x \to x_0}f(x)=f(x_0)$
 
 $\forall \varepsilon>0$ ，取一致连续对应的 $\delta=\delta(\varepsilon)$，当 $|x-x_0|<\delta$ 时，$|f(x)-f(x_0)|<\varepsilon$，故连续。
 
+## 非一致连续的定义
 
-#### 非一致连续的定义
 若 $\exists \varepsilon_0>0,\forall n \in \mathbb{N},\exists x_n^{(1)},x_n^{(2)} \in I$，使得 $|x_n^{(1)}-x_n^{(2)}| \to 0\ (n \to \infty)$，
 
 且 $|f(x_n^{(1)})-f(x_n^{(2)})| \geq \varepsilon_0$，则 $f(x)$ 在 $I$ 非一致连续。
 
+## 例：一致连续/非一致连续的证明
 
-#### 例：一致连续/非一致连续的证明
 1. **证明 $f(x)=\sin x$ 在 $(-\infty,+\infty)$ 一致连续**
    由三角不等式：$|\sin x_1 - \sin x_2| \leq |x_1-x_2|\ (\forall x_1,x_2 \in \mathbb{R})$。
    $\forall \varepsilon>0$，取 $\delta=\varepsilon$，当 $|x_1-x_2|<\delta$ 时，
@@ -277,8 +279,8 @@ $\forall \varepsilon>0$ ，取一致连续对应的 $\delta=\delta(\varepsilon)$
 
    则 $|x_n^{(1)}-x_n^{(2)}|=\frac{1}{n(n+1)} \to 0\ (n \to \infty)$，且 $|f(x_n^{(1)})-f(x_n^{(2)})|=|n-(n+1)|=1 \geq \varepsilon_0$，故 $y=\frac{1}{x}$ 在 $(0,1)$ 非一致连续。
 
+## 更多示例
 
-#### 更多示例
 1. **证明 $f(x)=x$ 在 $[0,+\infty)$ 一致连续**
    $\forall \varepsilon>0$，取 $\delta=\varepsilon$，当 $|x_1-x_2|<\delta$ 时，
 
@@ -302,9 +304,10 @@ $\forall \varepsilon>0$ ，取一致连续对应的 $\delta=\delta(\varepsilon)$
 
 ----
 
-## 2.10 闭区间 $[a,b]$ 上连续函数的性质
+# 2.10 闭区间 $[a,b]$ 上连续函数的性质
 
-#### 定理1：闭区间连续函数必一致连续
+## 定理1：闭区间连续函数必一致连续
+
 **证明（反证法）**：若 $[a,b]$ 上 $f(x)$ 非一致连续，
 
 则 $\exists \varepsilon_0>0,\exists x_n^{(1)},x_n^{(2)} \in [a,b]$，使得 $|x_n^{(1)}-x_n^{(2)}| \to 0\ (n \to \infty)$ 且 $|f(x_n^{(1)})-f(x_n^{(2)})| \geq \varepsilon_0$。
@@ -313,8 +316,8 @@ $\forall \varepsilon>0$ ，取一致连续对应的 $\delta=\delta(\varepsilon)$
 
 由连续性得 $f(x_{n_k}^{(1)}) \to f(x^*),f(x_{n_k}^{(2)}) \to f(x^*)$，与 $|f(x_{n_k}^{(1)})-f(x_{n_k}^{(2)})| \geq \varepsilon_0$ 矛盾。
 
+## 定理2：闭区间连续函数必有界
 
-#### 定理2：闭区间连续函数必有界
 即 $\exists M>0$，使得 $|f(x)| \leq M\ (\forall x \in [a,b])$。
 **证明（反证法）**：若 $f(x)$ 无界，则 $\forall M>0,\exists x_M \in [a,b]$ 使得 $|f(x_M)|>M$。
 
@@ -324,20 +327,20 @@ $\forall \varepsilon>0$ ，取一致连续对应的 $\delta=\delta(\varepsilon)$
 
 由连续性得 $f(x_{n_k}) \to f(x^*)$，与 $|f(x_{n_k})|>n_k \to \infty$ 矛盾。
 
+## 定理3：闭区间连续函数必有最大值与最小值
 
-#### 定理3：闭区间连续函数必有最大值与最小值
 即 $\exists x_1,x_2 \in [a,b]$，使得 $f(x_1)=\max_{x \in [a,b]}f(x),f(x_2)=\min_{x \in [a,b]}f(x)$。
 **注**：$f(x)=\frac{1}{x}$ 在 $(0,1)$ 连续但无最值。
 
+## 定理4：零点存在定理
 
-#### 定理4：零点存在定理
 设 $f(x)$ 在 $[a,b]$ 连续，且 $f(a)f(b)<0$，则 $\exists c \in (a,b)$ 使得 $f(c)=0$。
 
 **例**：证明 $2^x-4x=0$ 在 $(0,\frac{1}{2})$ 至少有一个解。
 令 $f(x)=2^x-4x$，$f(x)$ 在 $(0,\frac{1}{2})$ 连续，且 $f(0)=1>0,f(\frac{1}{2})=\sqrt{2}-2<0$，由零点定理得证。
 
+## 定理5：介值定理
 
-#### 定理5：介值定理
 设 $f(x)$ 在 $[a,b]$ 连续，$f(a) \neq f(b)$，若 $f(a)<\xi<f(b)$（或 $f(b)<\xi<f(a)$），则 $\exists c \in (a,b)$ 使得 $f(c)=\xi$。
 
 **证明**：令 $g(x)=f(x)-\xi$，则 $g(x)$ 在 $[a,b]$ 连续，
@@ -346,8 +349,8 @@ $\forall \varepsilon>0$ ，取一致连续对应的 $\delta=\delta(\varepsilon)$
 
 由零点定理得 $\exists c \in (a,b)$ 使得 $g(c)=0$，即 $f(c)=\xi$。
 
+## 补充极限计算示例
 
-### 补充极限计算示例
 1. **求 $\lim_{x \to \infty}(\sqrt{x^2-x+1}-ax-b)=0$ 中的 $a,b$**
    先化简：$\sqrt{x^2-x+1}=x\sqrt{1-\frac{1}{x}+\frac{1}{x^2}} \sim x-\frac{1}{2}\ (x \to \infty)$，故 $a=1$；
    再计算 $b$：
