@@ -7,7 +7,7 @@ export default defineCollection({
       text: "高等代数",
       collapsed: false,
       link: "/algebra/",
-      items: ["chapter-1", "chapter-2"],
+      items: ["chapter-1", "chapter-2", "lesson-1", "lesson-2", "lesson-3", "lesson-4", "lesson-5"]
     },
   ],
   title: '高等代数',
