@@ -1,5 +1,5 @@
 ---
-title: Chapter 1 
+title: Chapter-1 
 permalink: /python/chapter-1/
 createTime: 2025/10/12 10:24:43
 ---
@@ -319,13 +319,15 @@ ge = int(number[2])
 
 `s.isdigit()`  当s所有字符都是阿拉伯数字时返回True
 
+`s.isalpha()`  都是字母
+
 `s.isspace()` 当s所有字符都是空格返回True
 
 `s.endswith(suffix)` `s.startswith(prefix)` 判断开头结尾是不是True
 
 
 
-`s.split(sep)` 返回一个列表，由s根据sep被分割的部分构成
+`s.split(sep)` 返回一个列表，由s根据sep被分割的部分构成，split开头结尾也有会有空元素
 
 `s.join()` 列表中字符串，用s分割，与上一个互逆（每个元素必须是字符串才能拼接，也就是用引号引起来）
 
@@ -386,9 +388,9 @@ hi
 ```python
 >>> print("{:,}".format(1234567)) #千分符可以单独使用，适用于整数和浮点数
 1,234,567
->>> print("{:,2f}".format(1234.567)) #设置浮点数精度，类型f必须写
+>>> print("{:.2f}".format(1234.567)) #设置浮点数精度，类型f必须写
 1234.57 #四舍五入了
->>> print("{:,2}".format("hello")) #设置字符串最大输出长度
+>>> print("{:.2}".format("hello")) #设置字符串最大输出长度
 he
 >>> print("{:b}".format(255)) #二进制
 11111111

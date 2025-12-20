@@ -137,7 +137,7 @@ print(fact(abs(int(num))))
 
 `s[i]`  索引，返回第i个元素
 
-`s[i:j]` 切片，从第i个到第j个， **不包含第j个** 
+`s[i:j]` 切片，从第i个到第j个， **不包含第j个** （超出范围不报错，会修正到最能取到的部分，两侧都在一边的外侧返回空列表）
 
 `len(s)` 序列s的元素个数；
 
@@ -202,6 +202,28 @@ L=[]
 for i in range(1,101):
     L.append(i**2)
 print(L)
+```
+
+```python
+lst =[1,2,3]
+lst *=[4,5]  #等效于lst=lst+[4,5],但是这里是原地修改
+print(lst) #输出[1,2,3,4,5]
+
+lst=[1,2]
+lst *= 3
+print(lst)  #输出[1,2,1,2,1,2]
+
+lst=['a','b']
+lst *= 'cd' #对于可迭代对象，逐个添加
+print(lst)  #输出['a','b','c','d']
+
+lst=['a','b']
+lst += 'cd' #要求右侧是可迭代对象，遍历逐个添加
+print(lst)  #输出['a','b','c','d']
+
+lst=['a','b']
+lst += ['cd']
+print(lst)  #输出['a','b','cd']
 ```
 
 
@@ -371,6 +393,15 @@ while True:
         break
 if times>7:
     print("你的智商余额明显不足！")
+```
+
+```python
+#randon库常用方法
+random() #生成[0.0,1.0)的随机小数
+randint(a,b) #生成[a,b]之间的整数
+uniform(a,b) #生成[a,b]之间的随机小数
+choice(seq) #在序列类型（如列表）里随机返回一个元素
+shuffle(seq)  #将列表元素随机排列
 ```
 
 

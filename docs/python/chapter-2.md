@@ -161,6 +161,8 @@ for i in range(5):
 
 `range(start,stop)` 生成从start到stop的整数列表，不包括stop
 
+`range(start,stop,step)` 步长step可正可负，start下一个是start+step
+
 # 异常处理
 
 ```python
@@ -169,4 +171,8 @@ try:
 except<异常类型>:
 	<语句块2>
 ```
+
+语句块1可能发生错误
+
+所有问题 Exception
 
