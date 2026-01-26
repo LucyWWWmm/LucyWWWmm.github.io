@@ -26,7 +26,7 @@ $C=\underset{x\to x_0}{\lim}\dfrac{f(x)-(f(x_0)+f'(x_0)(x-x_0))}{(x-x_0)^2}=\dfr
 
 这说明了只有唯一的一个二次多项式能满足需求
 
-**定理：** 设 $f''(x_0)$ 存在，则 $\underset{x\to x_0}{\lim}\dfrac{f(x)-\left[f(x_0)+\dfrac{f'(x_0)}{1!}(x-x_0)+\dfrac{f''(x_0)}{2!}(x-x_0)^2\right]}{(x-x_0)^2}=0$
+> **定理：**  设 $f''(x_0)$ 存在，则 $\underset{x\to x_0}{\lim}\dfrac{f(x)-\left[f(x_0)+\dfrac{f'(x_0)}{1!}(x-x_0)+\dfrac{f''(x_0)}{2!}(x-x_0)^2\right]}{(x-x_0)^2}=0$
 
 证：由洛必达法则， $\underset{x\to x_0}{\lim}\dfrac{f'(x)-[f'(x_0)+f''(x_0)(x-x_0)]}{2(x-x_0)}$ ，再由导数定义得 $\dfrac{1}{2}\underset{x\to x_0}{\lim}\dfrac{f'(x)-f'(x_0)}{x-x_0}-\dfrac{f''(x_0)}{2}=\dfrac{1}{2}f''(x_0)-\dfrac{f''(x_0)}{2}=0$
 
@@ -82,14 +82,16 @@ $\cos x = 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \dots + (-1)^n\dfrac{x^{2n}}{(
 $\ln(1+x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dots + (-1)^{n-1}\dfrac{x^n}{n} + o(x^n)$
 
 $(1+x)^\lambda = 1 + \lambda x + \dfrac{\lambda(\lambda-1)}{2!}x^2 + \dots + \dfrac{\lambda(\lambda-1)\dots(\lambda-n+1)}{n!}x^n + o(x^n)$
-**符号约定**：二项式系数 $ \binom{\lambda}{k} = \dfrac{\lambda(\lambda-1)\dots(\lambda-k+1)}{k!} $，$ \binom{\lambda}{0}=1 $，展开式也可写为：
-$ (1+x)^\lambda = \sum_{k=0}^n \binom{\lambda}{k}x^k + o(x^n) $
 
-$ \arctan x = x - \dfrac{x^3}{3} + \dfrac{x^5}{5} - \dots + (-1)^n\dfrac{x^{2n+1}}{2n+1} + o(x^{2n+2}) $
+**符号约定**：二项式系数 $\binom{\lambda}{k} = \dfrac{\lambda(\lambda-1)\dots(\lambda-k+1)}{k!}$，$\binom{\lambda}{0}=1$ ，展开式也可写为：  
+$(1+x)^\lambda = \sum_{k=0}^n \binom{\lambda}{k}x^k + o(x^n)$
+
+$\arctan x = x - \dfrac{x^3}{3} + \dfrac{x^5}{5} - \dots + (-1)^n\dfrac{x^{2n+1}}{2n+1} + o(x^{2n+2})$
 **推导关键**：
-1. 由 $f'(x)=\dfrac{1}{1+x^2}$，得恒等式 $ (1+x^2)f'(x)=1 $；
-2. 两边对 $x$ 求 $n$ 阶导数（Leibniz公式）：$ (1+x^2)f^{(n+1)}(x)+2nxf^{(n)}(x)+n(n-1)f^{(n-1)}(x)=0 $；
-3. 代入 $x=0$ 得递推式 $ f^{(n+1)}(0)=-(n-1)nf^{(n-1)}(0) $，结合 $f(0)=0,f'(0)=1$，得：
-   $ f^{(n)}(0)= \begin{cases} 0, & n为偶数 \\ (-1)^k(2k)!, & n=2k+1 \end{cases} $；
-4. 代入Taylor公式化简得到展开式。
+
+1. 由 $f'(x)=\dfrac{1}{1+x^2}$ ，得恒等式 $(1+x^2)f'(x)=1$
+2. 两边对 $x$ 求 $n$ 阶导数（Leibniz公式）：$(1+x^2)f^{(n+1)}(x)+2nxf^{(n)}(x)+n(n-1)f^{(n-1)}(x)=0$
+3. 代入 $x=0$ 得递推式 $f^{(n+1)}(0)=-(n-1)nf^{(n-1)}(0)$ ，结合 $f(0)=0,f'(0)=1$ ，得：
+4. $f^{(n)}(0)= \begin{cases} 0, & n为偶数 \\ (-1)^k(2k)!, & n=2k+1 \end{cases}$；
+5. 代入Taylor公式化简得到展开式
 

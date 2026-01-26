@@ -22,7 +22,7 @@ createTime: 2025/10/27 22:24:43
 
 思考：设 $\lim_{x \to x_0} f(x) = A$ 存在，则 $\forall \varepsilon > 0$，$\exists \delta$，使得 $\{ x \mid |f(x) - A| < \varepsilon \}$。
 
-$f(x) \to A \ (x \to x_0) \iff \exists \varepsilon > 0$， $\forall \delta > 0$ ， $\exists x_\delta$  满足 $0 < |x_\delta - x_0| < \delta$，且 $|f(x_\delta) - A| \geq \varepsilon$。
+不是 $f(x) \to A \ (x \to x_0) \iff \exists \varepsilon > 0$ ， $\forall \delta > 0$ ， $\exists x_\delta$  满足 $0 < |x_\delta - x_0| < \delta$，且 $|f(x_\delta) - A| \geq \varepsilon$。
 
 ​    
 
@@ -537,5 +537,4 @@ $$
 $$
 \lim_{x \to 0} \frac{x \cdot \left(-\frac{1}{2}x^2\right)}{x^3 \cos x} = \lim_{x \to 0} \frac{-\frac{1}{2}x^3}{x^3 \cos x} = -\frac{1}{2}
 $$
-
 

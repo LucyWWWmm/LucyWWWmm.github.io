@@ -66,9 +66,9 @@ createTime: 2025/10/12 10:20:03
 
 ### 定理：“保号性”
 
-  1.设  $\underset{n\to \infty}{lim}a_n=a$  , $a> \alpha$ ,则 $\exist N_1$ ,当 $n>N_1$ 时, $a_n> a$ ,
+  1.设  $\underset{n\to \infty}{lim}a_n=a$  , $a> \alpha$ ,则 $\exist N_1$ ,当 $n>N_1$ 时, $a_n> \alpha$ ,
 
-​        $\underset{n\to \infty}{lim}b_n=b,b< \beta$  ,则 $\exist N_2$ ,当 $n>N_2$ 时, $b_n < b$
+​        $\underset{n\to \infty}{lim}b_n=b,b< \beta$  ,则 $\exist N_2$ ,当 $n>N_2$ 时, $b_n < \beta$
 
 2. $\exist N \in \N ,s.t.$ 当 $n>N$ 时, $a_n \leq b_n$ ,则 $a \leq b$
 
