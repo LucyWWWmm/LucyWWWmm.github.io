@@ -16,7 +16,13 @@ export default defineCollection({
 				"/programming/matlab/basic-1", "/programming/matlab/basic-2",
 			],
 		},
-   
+    {
+			text: "AIprogramming",
+			collapsed: false,
+			items: [
+				"/programming/AIprogramming/chapter-1", "/programming/AIprogramming/chapter-2",
+			],
+		},
   ],
   title: '编程',
   type: "doc",

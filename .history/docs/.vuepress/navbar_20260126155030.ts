@@ -13,6 +13,8 @@ export const navbar = defineNavbarConfig([
 		text: "笔记",
 		items: [
 			{ text: "数学分析", link: "/analysis/README.md" },
+			{ text: "高等代数", link: "/algebra/README.md" },
+			{ text: "编程", link: "/progamming/README.md" },
 		],
 	},
 	{

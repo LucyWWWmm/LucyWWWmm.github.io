@@ -13,10 +13,11 @@ export default defineCollection({
 			text: "matlab",
 			collapsed: false,
 			items: [
-				"/programming/matlab/basic-1",
+				"/programming/matlab/basic-1", "/programming/matlab/basic-2",
 			],
 		},
+   
   ],
-  title: 'programming',
+  title: '编程',
   type: "doc",
 });
